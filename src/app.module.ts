@@ -1,6 +1,4 @@
 // import { Module } from '@nestjs/common';
-// import { AppController } from './app.controller';
-// import { AppService } from './app.service';
 // import { DocYjsGateway } from './yjs-doc/yjs-doc.gateway';
 
 // @Module({
@@ -12,8 +10,12 @@
 
 import { Module } from '@nestjs/common';
 import { DocroomModule } from './yjs-doc/yjs-doc.module';
+import { AppController } from './app.controller';
+import { AppService } from './app.service';
 
 @Module({
+  controllers: [AppController],
+  providers: [AppService],
   imports: [DocroomModule],
 })
 export class AppModule {}
