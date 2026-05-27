@@ -1,15 +1,15 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { YjsDocGateway } from './yjs-doc.gateway';
+import { DocroomGateway } from './yjs-doc.gateway';
 
-describe('YjsDocGateway', () => {
-  let gateway: YjsDocGateway;
+describe('DocroomGateway', () => {
+  let gateway: DocroomGateway;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      providers: [YjsDocGateway],
+      providers: [DocroomGateway],
     }).compile();
 
-    gateway = module.get<YjsDocGateway>(YjsDocGateway);
+    gateway = module.get<DocroomGateway>(DocroomGateway);
   });
 
   it('should be defined', () => {
