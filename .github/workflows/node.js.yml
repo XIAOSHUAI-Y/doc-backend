@@ -31,6 +31,7 @@ jobs:
           cache: 'pnpm'
 
       - run: pnpm install --frozen-lockfile
+      - run: npx prisma generate
       - run: pnpm run build
       - run: pnpm test
 
@@ -54,6 +55,7 @@ jobs:
           cache: 'pnpm'
 
       - run: pnpm install --frozen-lockfile
+      - run: npx prisma generate
       - run: pnpm run build
 
       - name: Deploy to Vercel
